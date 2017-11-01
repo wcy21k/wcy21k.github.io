@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.wcy21k.com">
-  <title>Archives: 2017 | Wang超阳的博客</title>
+  <title>聊一聊BEM设计模式在Vue组件开发中的应用 | Wang超阳的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="wcy21k | wcy | 超阳">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wang超阳的博客">
-<meta property="og:url" content="http://www.wcy21k.com/archives/2017/index.html">
+  <meta name="description" content="回想一下在你的前端生涯中是否遇到过以下问题1.在写css的时候经常会在命名class时绞尽脑汁2.在团队多人开发中出现css命名冲突3.在进行组件化开发时如何规范书写css 什么是BEMBEM是Yandex团队提出的一种css的命名方式，通过这种命名方式可以很好地解决上面遇到的问题，提高css的开发效率和可读性 进入BEM的世界  ● B: 表示块，可以抽象成一个组件  ● E: 表示元素，组件下">
+<meta name="keywords" content="技术文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聊一聊BEM设计模式在Vue组件开发中的应用">
+<meta property="og:url" content="http://www.wcy21k.com/2017/11/01/BEM设计模式/index.html">
 <meta property="og:site_name" content="Wang超阳的博客">
-<meta property="og:description" content="wcy21k | wcy | 超阳">
+<meta property="og:description" content="回想一下在你的前端生涯中是否遇到过以下问题1.在写css的时候经常会在命名class时绞尽脑汁2.在团队多人开发中出现css命名冲突3.在进行组件化开发时如何规范书写css 什么是BEMBEM是Yandex团队提出的一种css的命名方式，通过这种命名方式可以很好地解决上面遇到的问题，提高css的开发效率和可读性 进入BEM的世界  ● B: 表示块，可以抽象成一个组件  ● E: 表示元素，组件下">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.wcy21k.com/img/BEM_1.png">
+<meta property="og:image" content="http://www.wcy21k.com/img/BEM_2.png">
+<meta property="og:image" content="http://www.wcy21k.com/img/BEM_3.png">
+<meta property="og:updated_time" content="2017-11-01T07:47:00.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wang超阳的博客">
-<meta name="twitter:description" content="wcy21k | wcy | 超阳">
+<meta name="twitter:title" content="聊一聊BEM设计模式在Vue组件开发中的应用">
+<meta name="twitter:description" content="回想一下在你的前端生涯中是否遇到过以下问题1.在写css的时候经常会在命名class时绞尽脑汁2.在团队多人开发中出现css命名冲突3.在进行组件化开发时如何规范书写css 什么是BEMBEM是Yandex团队提出的一种css的命名方式，通过这种命名方式可以很好地解决上面遇到的问题，提高css的开发效率和可读性 进入BEM的世界  ● B: 表示块，可以抽象成一个组件  ● E: 表示元素，组件下">
+<meta name="twitter:image" content="http://www.wcy21k.com/img/BEM_1.png">
   
     <link rel="alternative" href="/atom.xml" title="Wang超阳的博客" type="application/atom+xml">
   
@@ -143,36 +149,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-BEM设计模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/01/BEM设计模式/" class="archive-article-date">
-  	<time datetime="2017-10-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/BEM设计模式/">聊一聊BEM设计模式在Vue组件开发中的应用</a>
+    <h1 class="article-title" itemprop="name">
+      聊一聊BEM设计模式在Vue组件开发中的应用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/01/BEM设计模式/" class="archive-article-date">
+  	<time datetime="2017-10-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>回想一下在你的前端生涯中是否遇到过以下问题<br>1.在写css的时候经常会在命名class时绞尽脑汁<br>2.在团队多人开发中出现css命名冲突<br>3.在进行组件化开发时如何规范书写css</p>
+<h3 id="什么是BEM"><a href="#什么是BEM" class="headerlink" title="什么是BEM"></a>什么是BEM</h3><p>BEM是Yandex团队提出的一种css的命名方式，通过这种命名方式可以很好地解决上面遇到的问题，提高css的开发效率和可读性</p>
+<h3 id="进入BEM的世界"><a href="#进入BEM的世界" class="headerlink" title="进入BEM的世界"></a>进入BEM的世界</h3><p>  ● B: 表示块，可以抽象成一个组件<br>  ● E: 表示元素，组件下的一个元素，多个元素形成一个组件<br>  ● M:表示修饰符，可以用来表示元素的状态，比如激活状态，颜色，大小</p>
+<h3 id="BEM这货究竟张啥样呢，颜值高不高，请看下面的代码"><a href="#BEM这货究竟张啥样呢，颜值高不高，请看下面的代码" class="headerlink" title="BEM这货究竟张啥样呢，颜值高不高，请看下面的代码"></a>BEM这货究竟张啥样呢，颜值高不高，请看下面的代码</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.block &#123;&#125;</div><div class="line">.block__element &#123;&#125;</div><div class="line">.block__element--modifier &#123;&#125;</div></pre></td></tr></table></figure>
+<p>看完后你的内心会不会在想,卧槽，这货居然这么丑，名字还这么长，丑拒…</p>
+<h3 id="和–连接符这是什么鬼"><a href="#和–连接符这是什么鬼" class="headerlink" title="__和–连接符这是什么鬼"></a>__和–连接符这是什么鬼</h3><p>  ● __主要用来表示块(B)和元素(E)间的连接<br>  ● –用来表示块或者元素与状态的连接</p>
+<p>比如我们要做写一个button的组件，可以这么来<br><img src="/img/BEM_1.png" alt=""></p>
+<p><img src="/img/BEM_2.png" alt=""></p>
+<h3 id="在Vue中结合Stylus预编译器使用BEM规范"><a href="#在Vue中结合Stylus预编译器使用BEM规范" class="headerlink" title="在Vue中结合Stylus预编译器使用BEM规范"></a>在Vue中结合Stylus预编译器使用BEM规范</h3><p><img src="/img/BEM_3.png" alt=""></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,57 +229,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.wcy21k.com/2017/11/01/BEM设计模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/深秋有感/" class="archive-article-date">
-  	<time datetime="2017-10-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/31/深秋有感/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深秋有感</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/深秋有感/">深秋有感</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">美文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是BEM"><span class="toc-number">1.</span> <span class="toc-text">什么是BEM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进入BEM的世界"><span class="toc-number">2.</span> <span class="toc-text">进入BEM的世界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BEM这货究竟张啥样呢，颜值高不高，请看下面的代码"><span class="toc-number">3.</span> <span class="toc-text">BEM这货究竟张啥样呢，颜值高不高，请看下面的代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#和–连接符这是什么鬼"><span class="toc-number">4.</span> <span class="toc-text">__和–连接符这是什么鬼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Vue中结合Stylus预编译器使用BEM规范"><span class="toc-number">5.</span> <span class="toc-text">在Vue中结合Stylus预编译器使用BEM规范</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -257,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
